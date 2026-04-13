@@ -63,6 +63,7 @@ class Basics:#(s)
             if char.islower():
                 count += 1
 
+        #Your code here
         return count
         pass#(s)
                 
@@ -80,6 +81,8 @@ class Basics:#(s)
             Returns:
                 str: A string containing all uppercase letters from the input text, merged together.
         """
+
+        #Your code here
         result = ""
         for char in file_string:
             if char.isupper():
@@ -101,6 +104,7 @@ class Basics:#(s)
             Returns:
                 int: The sum of all individual digits in the text string.
         """
+
         #Your code here
         total = 0
         for char in file_string:
@@ -121,6 +125,7 @@ class Basics:#(s)
             dictionary_words.append(w.lower())
         
         return dictionary_words
+        pass#(s)
 
     def clean_word(self, word):
         cleaned = ""
@@ -130,6 +135,7 @@ class Basics:#(s)
                 cleaned += char
         
         return cleaned
+        pass#(s)
 
     #(Task 3.1)
     def specific_character(self, file_string, word, letter) -> str|bool:#(s)
@@ -163,6 +169,9 @@ class Basics:#(s)
             return False
         
         if cleaned.lower() not in dictionary_words:
+            return False
+        
+        if letter < 1 or letter > len(cleaned):
             return False
         
         return cleaned[letter - 1]
@@ -258,14 +267,16 @@ if __name__ == '__main__':#(s)
     my_instance = Basics()
     
     text = my_instance.read_file()
+    print(text)
+    print(type(text))
 
     print("Length:", my_instance.length_of_file(text))
     print("Lowercase:", my_instance.lower_case_count(text))
     print("Uppercase:", my_instance.upper_case_merge(text))
     print("Digits sum:", my_instance.digits_sum(text))
 
-    print("Specific char:", my_instance.specific_character(text, 1, 2))
-    print("Words >= length:", my_instance.word_display(text, 5))
+    print("Specific char:", my_instance.specific_character(text, 7, 1))
+    print("Words >= length:", my_instance.word_display(text, 13))
     print("Letter count (exclude a,b):", my_instance.letter_count(text, ["a", "b"]))
     print("Replace:", my_instance.find_replace(text, "Python", "Java"))
 
