@@ -264,20 +264,20 @@ class Basics:#(s)
 
 if __name__ == '__main__':#(s)
     #You can place any ad-hoc testing here, below are examples of how to do this.
-    my_instance = Basics()
+    # my_instance = Basics()
     
-    text = my_instance.read_file()
-    print(text)
-    print(type(text))
+    # text = my_instance.read_file()
+    # print(text)
+    # print(type(text))
 
-    print("Length:", my_instance.length_of_file(text))
-    print("Lowercase:", my_instance.lower_case_count(text))
-    print("Uppercase:", my_instance.upper_case_merge(text))
-    print("Digits sum:", my_instance.digits_sum(text))
+    # print("Length:", my_instance.length_of_file(text))
+    # print("Lowercase:", my_instance.lower_case_count(text))
+    # print("Uppercase:", my_instance.upper_case_merge(text))
+    # print("Digits sum:", my_instance.digits_sum(text))
 
-    print("Specific char:", my_instance.specific_character(text, 7, 1))
-    print("Words >= length:", my_instance.word_display(text, 13))
-    print("Letter count (exclude a,b):", my_instance.letter_count(text, ["a", "b"]))
-    print("Replace:", my_instance.find_replace(text, "Python", "Java"))
+    # print("Specific char:", my_instance.specific_character(text, 7, 1))
+    # print("Words >= length:", my_instance.word_display(text, 13))
+    # print("Letter count (exclude a,b):", my_instance.letter_count(text, ["a", "b"]))
+    # print("Replace:", my_instance.find_replace(text, "Python", "Java"))
 
     pass#(s)
